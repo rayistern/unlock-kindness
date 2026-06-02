@@ -1,0 +1,8 @@
+{
+  "name": "Merkos 302",
+  "description": "Microdonations to Merkos 302 on every unlock",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
