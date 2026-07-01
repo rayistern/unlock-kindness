@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Referenced by AndroidManifest.xml (android:label) and MainActivity's
+         launcher intent-filter. Missing from the AI Studio export — GH issue #1. -->
+    <string name="app_name">Unlock Kindness</string>
+</resources>

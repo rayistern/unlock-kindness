@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Referenced by AndroidManifest.xml (android:fullBackupContent), consumed on
+   API < 31 (Android 12) devices via the legacy Auto Backup mechanism. Missing
+   from the AI Studio export — GH issue #1.
+
+   Empty ruleset = no explicit include/exclude rules, so Android falls back to
+   its default backup behavior (back up everything except a few system paths).
+   This app's local Room database (unlock history) is small and non-sensitive,
+   so the default is fine; tighten this if that changes.
+-->
+<full-backup-content>
+</full-backup-content>

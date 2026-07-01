@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Referenced by AndroidManifest.xml (android:theme) for both the
+         application and MainActivity. Missing from the AI Studio export —
+         GH issue #1. Parented on Material3.DayNight.NoActionBar since the
+         app's UI is built entirely in Jetpack Compose with Material3 — the
+         XML theme only needs to supply the window-level attributes Compose
+         doesn't control (status bar, splash background, etc.). -->
+    <style name="Theme.MyApplication" parent="Theme.Material3.DayNight.NoActionBar" />
+</resources>
