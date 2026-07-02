@@ -103,6 +103,11 @@ dependencies {
   implementation(libs.kotlinx.coroutines.android)
   implementation(libs.kotlinx.coroutines.core)
   implementation(libs.logging.interceptor)
+  // Classic Material Components library: supplies the Theme.Material3.* XML
+  // style hierarchy used by res/values/themes.xml (AAPT resource-linking
+  // dependency, not a Compose runtime dependency — see version-catalog
+  // comment on materialComponents for the full story, GH issue #1).
+  implementation(libs.material.components)
   implementation(libs.moshi.kotlin)
   implementation(libs.okhttp)
   // implementation(libs.play.services.location)

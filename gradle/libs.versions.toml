@@ -32,6 +32,15 @@ androidxTestRunner = "1.6.2"
 robolectric = "4.14.1"
 roborazzi = "1.32.0"
 secretsGradlePlugin = "2.0.1"
+# The classic (View-system) Material Components library. Needed even in a
+# 100%-Compose UI because it's the library that actually defines the
+# Theme.Material3.* XML style hierarchy referenced from
+# res/values/themes.xml / AndroidManifest.xml android:theme — Compose's
+# androidx.compose.material3 artifact only ships Kotlin composables, not XML
+# styles, so without this dependency AAPT fails with "resource
+# style/Theme.Material3.DayNight.NoActionBar not found" (GH issue #1, CI run
+# 28557347820, 2026-07-02).
+materialComponents = "1.12.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -51,6 +60,7 @@ androidx-compose-material-icons-core = { group = "androidx.compose.material", na
 androidx-compose-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
 firebase-ai = { group = "com.google.firebase", name = "firebase-ai" }
+material-components = { group = "com.google.android.material", name = "material", version.ref = "materialComponents" }
 androidx-room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
 androidx-room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
