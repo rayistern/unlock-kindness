@@ -8,7 +8,14 @@ plugins {
 
 android {
   namespace = "com.example"
-  compileSdk { version = release(36) { minorApiLevel = 1 } }
+  // Plain-integer compileSdk assignment: the typesafe `compileSdk { version =
+  // release(36) { minorApiLevel = 1 } }` block DSL (originally in the AI
+  // Studio export) requires a newer Android Gradle Plugin than the 8.7.3
+  // pinned in gradle/libs.versions.toml, and fails CI with "Unresolved
+  // reference: minorApiLevel" (GH issue #1, CI run 2026-07-01). compileSdk 36
+  // is API-equivalent for build purposes; the minor API level distinction
+  // only matters for a handful of preview-SDK edge cases this app doesn't use.
+  compileSdk = 36
 
   defaultConfig {
     applicationId = "com.aistudio.pennydrop.xkqzwm"
@@ -96,6 +103,11 @@ dependencies {
   implementation(libs.kotlinx.coroutines.android)
   implementation(libs.kotlinx.coroutines.core)
   implementation(libs.logging.interceptor)
+  // Classic Material Components library: supplies the Theme.Material3.* XML
+  // style hierarchy used by res/values/themes.xml (AAPT resource-linking
+  // dependency, not a Compose runtime dependency — see version-catalog
+  // comment on materialComponents for the full story, GH issue #1).
+  implementation(libs.material.components)
   implementation(libs.moshi.kotlin)
   implementation(libs.okhttp)
   // implementation(libs.play.services.location)

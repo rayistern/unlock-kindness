@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Referenced by AndroidManifest.xml (android:dataExtractionRules), the
+   Android 12+ (API 31+) replacement for backup_rules.xml — covers both
+   cloud backup and device-to-device transfer. Missing from the AI Studio
+   export — GH issue #1.
+
+   Empty cloud-backup/device-transfer blocks = default behavior (back up /
+   transfer everything). Same reasoning as backup_rules.xml: nothing in this
+   app's local state is sensitive enough to warrant exclusion today.
+-->
+<data-extraction-rules>
+    <cloud-backup>
+    </cloud-backup>
+    <device-transfer>
+    </device-transfer>
+</data-extraction-rules>
